@@ -14,4 +14,13 @@ gffread Canchrom_annotations.gff3 -g GCA_003013715.2_ASM301371v2_genomic.fna -y 
 #busco in protein-mode, less completeness for some reason
 busco -i Canschrom_proteins.faa -o 2_busco_output -l eukaryota_odb10 -m proteins
 
-#
+
+
+
+
+
+#running orthofinder
+#clean up the faa files (after putting them into a shared dir)
+sed -i 's/\([A-Za-z]\)\.$/\1X/g' ./*.faa
+sed -i 's/\([A-Za-z]\)\.\([A-Za-z]\)/\1X\2/g' ./*.faa
+

@@ -24,3 +24,9 @@ busco -i Canschrom_proteins.faa -o 2_busco_output -l eukaryota_odb10 -m proteins
 sed -i 's/\([A-Za-z]\)\.$/\1X/g' ./*.faa
 sed -i 's/\([A-Za-z]\)\.\([A-Za-z]\)/\1X\2/g' ./*.faa
 
+# run orthofinder on strict mode
+orthofinder -f ortho_test -I 3
+
+
+#run iqtree to root/prep the tree to visualize in ITOL (improves tree liklihood)
+iqtree -t Species_Tree/SpeciesTree_rooted.txt -m MFP -bb 1000 -nt AUTO

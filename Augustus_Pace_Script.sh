@@ -1,9 +1,8 @@
 #!/bin/bash
 #SBATCH -JRunningAugustus
-#SBATCH --account=gts-p-sbrown365
+#SBATCH --account=gts-sbrown365-paid
 #SBATCH -N1 --ntasks-per-node=1
 #SBATCH --mem-per-cpu=32G
-#SBATCH --cpus-per-task=8  
 #SBATCH -t 24:00:00
 #SBATCH -q inferno
 #SBATCH -o Report-%j.out

@@ -10,11 +10,18 @@
 #SBATCH --mail-user=nmiller304@gatech.edu
 
 
+source ~/.bashrc   # Ensure conda/mamba is available
+mamba activate orthofinder  
 
-Input="$1"
-Output="$2"
+# Define input and output directories
+Input="/storage/scratch1/9/nmiller304/data"      
+Output="/storage/scratch1/9/nmiller304/candida_output"    
+
+
 
 mkdir -p "$Output"
+
+
 
 for SUBDIR in "$Input"/*/; do
     Genome=$(find "$SUBDIR" -type f -name "*.fna")

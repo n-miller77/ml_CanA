@@ -15,4 +15,4 @@ source ~/.bashrc   # Ensure conda/mamba is available
 mamba activate gethomo
 
 
-homologues.pl -d homolo_test -m cluster -X -M -t 0
+homologues.pl -d /storage/home/hcoda1/9/nmiller304/scratch/homolo_test -m cluster -X -M -t 0

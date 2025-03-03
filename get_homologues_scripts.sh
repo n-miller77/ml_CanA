@@ -13,6 +13,10 @@ get_homologues.pl -d <directory>
 
 get_homologues.pl -d <directory> -m local -n 20 -X
 
+
+homologues.pl -d <directory> -m cluster -X -t 0 -M
+homologues.pl -d <directory> -m cluster -X -M -t 0
+
 #to compare clusters 
 compare_clusters.pl -o sample_intersection -d \
 sample_buch_fasta_homologues/BuchaphCc_f0_alltaxa_algBDBH_e0_, \

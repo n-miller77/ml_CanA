@@ -4,7 +4,7 @@
 #SBATCH -N1 --ntasks-per-node=1
 #SBATCH --cpus-per-task=20
 #SBATCH --mem-per-cpu=32G
-#SBATCH -t 2:00:00
+#SBATCH -t 5:00:00
 #SBATCH -q inferno
 #SBATCH -o Report-%j.out
 #SBATCH --mail-type=BEGIN,END,FAIL
@@ -12,7 +12,7 @@
 
 
 source ~/.bashrc   # Ensure conda/mamba is available
-mamba activate gethomo
+mamba activate gethomo2
 
 
-homologues.pl -d /storage/home/hcoda1/9/nmiller304/scratch/homolo_test -m cluster -X -M -t 0
+get_homologues.pl -d /storage/home/hcoda1/9/nmiller304/scratch/99ID/stricter_geth_test -M -t=0 -S 90 -C 99

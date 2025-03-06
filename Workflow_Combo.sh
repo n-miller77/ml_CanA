@@ -39,6 +39,11 @@ get_homologues.pl -d <path/to/protein/files> -M -t=0 -S 90 -C 99
 compare_clusters.pl -o <output_dir> -m -d <input_dir -- should be the first dir in the file>
 
 
+-- additional step if wanted --
+#analyzes pangeome matrix: 
+parse_pangenome_matrix.pl -m sample_intersection/pangenome_matrix_t0.tab \
+-A sample_plasmids_gbk/A.txt -B sample_plasmids_gbk/B.txt -g
+
 
 
 

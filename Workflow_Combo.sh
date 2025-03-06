@@ -33,6 +33,21 @@ get_homologues.pl -d <path/to/protein/files> -M -t=0 -S 90 -C 99
 ./get_homologues.pl -d <path/to/protein/files> -M -t=0 -S 90 -C 99 -X
 
 
+#-m specifies cluster vs local (default is local)
+# -X uses diamond instead of blastp
+#-M uses orthoMCL algorithm instead of bidirectional best hits 
+#-c report genome composition analysis 
+# -C % sequence similarity for blast pairwise analysis 
+# -S min %sequence identity in BLAST query/subj pairs
+#-x allow sequences in multiple COG clusters
+#-t report sequence clusters including at least t taxa
+# -A calculate average identity of clustered sequences --- better to leave this off to reduce walltime 
+#-P calculate percentage of conserved proteins (POCP)
+
+
+
+
+
 
 -- creating PAV matrix --
 # this will allow you to create the PAV matrix for the clusters

@@ -31,7 +31,7 @@ get_homologues.pl -d <path/to/protein/files> -M -t=0 -S 90 -C 99
 # In tht file, locate the blastp query and remove --seg = yes ... save and then it shold work
 # Will need to run the script in the get_homologues directory with the mamba env activated for it to work
 ./get_homologues.pl -d <path/to/protein/files> -M -t=0 -S 90 -C 99 -X
-
+./get_homologues.pl -d /home/buffy/ml_cont/tiny_blood_urine -G -t 0 -S 90 -C 99 -X
 
 #-m specifies cluster vs local (default is local)
 # -X uses diamond instead of blastp
